@@ -1,3 +1,6 @@
+
+![image](https://github.com/a2rp/single-multu-accordion/assets/5670738/4b33e9c3-1019-49ca-99b9-b804d38abacb)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
