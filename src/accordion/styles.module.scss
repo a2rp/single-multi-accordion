@@ -1,0 +1,59 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+
+    .main {
+        width: 100%;
+        max-width: 1400px;
+
+        .title {
+            font-size: 32px;
+            font-weight: 900;
+        }
+
+        .enableMultiToggleContainer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .qnaListContainer {
+            margin-top: 30px;
+
+            .questionContainer {
+                border: 1px solid #000;
+                background-color: aliceblue;
+                padding: 0 15px;
+                font-weight: bold;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 2px;
+
+                .plusSign {
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+            }
+            .answerContainer {
+                .answer {
+                    padding: 5px 15px;
+                    transition: height 0.2s ease;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+}
