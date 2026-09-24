@@ -1,59 +1,416 @@
-*,
-::before,
-::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 12px;
+.page {
+  min-height: 100vh;
+  color: #edf2f7;
+  background: #07111f;
+}
+
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px max(20px, calc((100% - 1120px) / 2));
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(7, 17, 31, 0.9);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 38px;
+  height: 38px;
+  padding: 5px;
+  border: 1px solid #263b55;
+  border-radius: 11px;
+  background: #0d1d32;
+  object-fit: contain;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.brand:hover img {
+  border-color: #4da3ff;
+  box-shadow: 0 0 18px rgba(77, 163, 255, 0.2);
+}
+
+.brand span {
+  display: grid;
+  gap: 1px;
+}
+
+.brand small,
+.kicker {
+  color: #79b9ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.headerNote {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #a6b6c9;
+  font-size: 12px;
+}
+
+.headerNote svg {
+  color: #67d6ba;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
+  width: min(100% - 40px, 960px);
+  margin: 0 auto;
+  padding: 132px 0 80px;
+}
 
-    .main {
-        width: 100%;
-        max-width: 1400px;
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: end;
+  gap: 32px;
+  padding-bottom: 48px;
+}
 
-        .title {
-            font-size: 32px;
-            font-weight: 900;
-        }
+.kicker {
+  margin: 0 0 14px;
+}
 
-        .enableMultiToggleContainer {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 3px;
-        }
+.hero h1 {
+  max-width: 680px;
+  margin: 0;
+  color: #f8fafc;
+  font-size: clamp(38px, 6vw, 70px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
 
-        .qnaListContainer {
-            margin-top: 30px;
+.intro {
+  max-width: 610px;
+  margin: 24px 0 0;
+  color: #9fb0c3;
+  font-size: 16px;
+  line-height: 1.7;
+}
 
-            .questionContainer {
-                border: 1px solid #000;
-                background-color: aliceblue;
-                padding: 0 15px;
-                font-weight: bold;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin: 2px;
+.modeCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #263b55;
+  border-radius: 16px;
+  background: #0e1d31;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
 
-                .plusSign {
-                    font-size: 20px;
-                    font-weight: 900;
-                }
-            }
-            .answerContainer {
-                .answer {
-                    padding: 5px 15px;
-                    transition: height 0.2s ease;
-                    overflow: auto;
-                }
-            }
-        }
-    }
+.modeCard:hover {
+  border-color: #4da3ff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.modeCard > svg {
+  flex: 0 0 auto;
+  color: #7bbcff;
+  font-size: 22px;
+}
+
+.modeCard div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.modeCard strong {
+  color: #f8fafc;
+  font-size: 13px;
+}
+
+.modeCard span {
+  color: #8da1b7;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.switch {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.switchTrack {
+  display: block;
+  width: 42px;
+  height: 24px;
+  padding: 3px;
+  border: 1px solid #3a5675;
+  border-radius: 999px;
+  background: #091525;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.switchTrack span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #9db2c8;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.switch input:checked + .switchTrack {
+  border-color: #4da3ff;
+  box-shadow: 0 0 0 3px rgba(77, 163, 255, 0.12);
+}
+
+.switch input:checked + .switchTrack span {
+  background: #4da3ff;
+  transform: translateX(18px);
+}
+
+.listSection {
+  padding: 30px;
+  border: 1px solid #1e334c;
+  border-radius: 22px;
+  background: #0a1729;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.18);
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: clamp(24px, 4vw, 34px);
+  letter-spacing: -0.035em;
+}
+
+.count {
+  color: #91a6bc;
+  font-size: 12px;
+}
+
+.questionList {
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  overflow: hidden;
+  border: 1px solid #263b55;
+  border-radius: 14px;
+  background: #0d1c30;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.item:hover,
+.item.open {
+  border-color: #4da3ff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.17);
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+  border: 0;
+  color: #e8f1fa;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.question:focus-visible,
+.toTop:focus-visible,
+.footerLinks a:focus-visible {
+  outline: 2px solid #67d6ba;
+  outline-offset: 3px;
+}
+
+.chevron {
+  flex: 0 0 auto;
+  color: #86a6c7;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.open .chevron {
+  color: #67d6ba;
+  transform: rotate(180deg);
+}
+
+.answerWrap[hidden] {
+  display: none;
+}
+
+.answer {
+  margin: 0;
+  padding: 0 20px 22px;
+  color: #9fb0c3;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: min(100% - 40px, 960px);
+  margin: 0 auto;
+  padding: 24px 0 34px;
+  border-top: 1px solid #1e334c;
+}
+
+.footerMain {
+  display: grid;
+  gap: 8px;
+  color: #8094aa;
+  font-size: 12px;
+}
+
+.footerMain strong {
+  color: #e8f1fa;
+}
+
+.footerMain a {
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.footerMain a:hover {
+  color: #67d6ba;
+  text-shadow: 0 0 14px rgba(103, 214, 186, 0.25);
+}
+
+.footerGroups {
+  display: grid;
+  gap: 8px;
+  justify-items: end;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.footerLinks a {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid #263b55;
+  border-radius: 9px;
+  color: #90a4ba;
+  transition: border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.footerLinks a:hover {
+  color: #f8fafc;
+  border-color: #67d6ba;
+  box-shadow: 0 0 15px rgba(103, 214, 186, 0.16);
+}
+
+.toTop {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #4da3ff;
+  border-radius: 50%;
+  color: #07111f;
+  background: #67d6ba;
+  cursor: pointer;
+  transition: box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.toTop:hover {
+  border-color: #f8fafc;
+  box-shadow: 0 0 20px rgba(103, 214, 186, 0.3);
+}
+
+@media (max-width: 760px) {
+  .headerNote {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .modeCard {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 520px) {
+  .container,
+  .footer {
+    width: min(100% - 28px, 960px);
+  }
+
+  .header {
+    padding: 12px 14px;
+  }
+
+  .container {
+    padding-top: 106px;
+  }
+
+  .listSection {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .sectionHeading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footerGroups {
+    justify-items: start;
+  }
+
+  .footerLinks {
+    justify-content: flex-start;
+  }
 }
