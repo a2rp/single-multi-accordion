@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import {
     FiArrowUp,
     FiBookOpen,
@@ -8,6 +9,7 @@ import {
     FiCoffee,
     FiGithub,
     FiGlobe,
+
     FiHeart,
     FiLayers,
     FiMail,
@@ -19,9 +21,9 @@ const connectLinks = [
     ["Portfolio", "https://www.ashishranjan.net/", FiGlobe],
     ["GitHub", "https://github.com/a2rp", FiGithub],
     ["CodePen", "https://codepen.io/ash1198", FiCode],
-    ["LinkedIn", "https://www.linkedin.com/in/aashishranjan", FiLayers],
-    ["Facebook", "https://www.facebook.com/theash.ashish/", FiGlobe],
-    ["YouTube", "https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1", FiBookOpen],
+    ["LinkedIn", "https://www.linkedin.com/in/aashishranjan", FaLinkedinIn],
+    ["Facebook", "https://www.facebook.com/theash.ashish/", FaFacebookF],
+    ["YouTube", "https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1", FaYoutube],
     ["Email", "mailto:ash.ranjan09@gmail.com", FiMail],
 ];
 
