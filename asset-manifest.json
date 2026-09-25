@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/single-multi-accordion/static/css/main.bab569a1.css",
-    "main.js": "/single-multi-accordion/static/js/main.736e31f8.js",
+    "main.js": "/single-multi-accordion/static/js/main.363c6c60.js",
     "static/js/453.78fa8a83.chunk.js": "/single-multi-accordion/static/js/453.78fa8a83.chunk.js",
     "index.html": "/single-multi-accordion/index.html",
     "main.bab569a1.css.map": "/single-multi-accordion/static/css/main.bab569a1.css.map",
-    "main.736e31f8.js.map": "/single-multi-accordion/static/js/main.736e31f8.js.map",
+    "main.363c6c60.js.map": "/single-multi-accordion/static/js/main.363c6c60.js.map",
     "453.78fa8a83.chunk.js.map": "/single-multi-accordion/static/js/453.78fa8a83.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bab569a1.css",
-    "static/js/main.736e31f8.js"
+    "static/js/main.363c6c60.js"
   ]
 }
