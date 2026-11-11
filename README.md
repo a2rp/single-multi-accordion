@@ -14,20 +14,24 @@ A responsive React accordion demo that shows the same question list in single-op
 
 ## Tech stack
 
-- React and Create React App
-- SCSS modules
+- React, Vite, and SCSS modules
+- Vitest and React Testing Library for the existing UI checks
 - React Icons
 
 ## Run locally
 
 ```bash
-npm install
-npm start
+npm ci
+npm run dev
 ```
+
+Use `npm run build` for a production build, `npm run lint` to lint the source, and `npm test` to run the existing UI checks. Node.js 20.19+ or 22.12+ is required.
 
 ## Deployment
 
 Live app: [https://a2rp.github.io/single-multi-accordion/](https://a2rp.github.io/single-multi-accordion/)
+
+Deploy to GitHub Pages with `npm run deploy`.
 
 ## Links
 

@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import App from "./App";
+import App from "./App.jsx";
 
 test("opens one answer by default", () => {
     render(<App />);

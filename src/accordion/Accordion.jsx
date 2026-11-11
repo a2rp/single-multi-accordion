@@ -78,7 +78,7 @@ function Accordion() {
         <div className={styles.page}>
             <header className={styles.header}>
                 <a className={styles.brand} href="#top" aria-label="Accordion home">
-                    <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="" />
+                    <img src={`${import.meta.env.BASE_URL}logo.png`} alt="" />
                     <span><small>A2RP LAB</small>Accordion</span>
                 </a>
                 <div className={styles.headerNote}><FiCheckCircle aria-hidden="true" /> Accessible Q&A pattern</div>
